@@ -9,13 +9,13 @@ pipeline {
                 echo "---!!!!!!-------- JESTEM!!!!!"
             }
         }
-        stage('build') {
+        stage('prebuild') {
             steps {
 				script {
 				  if(isUnix()){
-					sh 'gradle build --info'
+					sh 'gradle --version'
 				  } else{
-					bat 'gradle build --info'
+					bat 'gradle --version'
 				  }
 				}
             }
