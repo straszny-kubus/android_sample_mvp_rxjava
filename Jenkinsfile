@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('przywitaj sie') {
             steps {
-                echo "---!!!!!!-------- JESTEM!!!!!"
+                echo "---!!!!!!-------- JESTEM!!!!! 2. raz.........."
             }
         }
         stage('prebuild') {
