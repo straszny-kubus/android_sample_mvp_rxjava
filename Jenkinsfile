@@ -11,7 +11,12 @@ pipeline {
         }
         stage('build') {
             steps {
-                sh 'gradle --version'
+                  if(isUnix()){
+						sh 'gradle build --info'
+					  }
+					  else{
+						bat 'gradle build --info'
+					  }
             }
         }
     }
